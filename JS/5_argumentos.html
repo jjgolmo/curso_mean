@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Más ejemplos JS - ahora de funciones</title>
+	</head>
+	<body>
+
+	</body>
+	<script>
+		/*listarArgumentos();
+		listarArgumentos(1);
+		listarArgumentos(1,2);
+		listarArgumentos(1,2,3);
+		listarArgumentos(1,2,3,4);*/
+		
+		function listarArgumentos(arg_1, arg_2) {
+		console.log("Num argum recibidos: " + arguments.length);
+		var resultado = " ";
+		for (var i=0; i<arguments.length; i++){
+			resultado += ", " + arguments[i]
+			}
+			
+		if (arguments.length > 0) {
+			switch (arg_1) {
+				case 0: console.log("Valor 0");
+				break
+				case 1: console.log("Valor 1");
+				break
+				case 2: console.log("Valor 2");
+				break
+				case 3: console.log("Valor 3");
+				break
+				default: console.log("Mayor");
+				break
+			}
+		}
+		return resultado; 
+		}
+		
+		console.log(listarArgumentos());
+		console.log(listarArgumentos(1));
+		console.log(listarArgumentos(1,2));
+		console.log(listarArgumentos(1,2,3));
+		console.log(listarArgumentos(1,2,3,4));
+
+	</script>
+</html>

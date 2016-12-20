@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Más ejemplos JS - ahora de funciones</title>
+	</head>
+	<body>
+
+	</body>
+	<script>
+		funcion_1();
+		function funcion_1(){
+			var variable_1 = "Variable Local";
+			
+			for (var i=0; i<10; i++) {
+				var otraVar = "variable en for"
+				console.log("valor de i: " + i);
+				}
+			console.log("valor de i fuera for: " + i);
+			console.log("valor de otraVar fuera for: " + otraVar);
+			console.log("valor de var1 fuera for: " + variable_1);
+		}	
+		console.log("otra fuera for: " + otraVar);
+	</script>
+</html>

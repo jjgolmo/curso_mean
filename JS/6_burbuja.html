@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Burbuja</title>
+	</head>
+	<body>
+<h1> Algoritmo burbuja JS
+</h1>
+	</body>
+	<script>
+	
+	function ordenar_for(argumento1) {
+	
+		for (var i=0; i<argumento1.length; i++){
+			for (var j=i; j<argumento1.length; j++){
+				if(argumento1[i]>argumento1[j]){
+					var aux = argumento1[i]
+					argumento1[i]=argumento1[j];
+					argumento1[j]=aux;
+				}
+				
+			}
+		}
+	}
+	
+	function ordenar_cadena(arg2){
+		var otro = [];
+		for(var i=0; i<arg2.length;i++){
+			otro[arg2[i]]=arg2[i];
+		}
+		var cadena = otro.join(",");
+		return cadena.split(",");
+	}
+	var array = [3, 7, 2, 11, 0, 1];
+	var array2 = array.slice();
+	console.log("Antes for: " + array);
+	ordenar_for(array);
+	console.log("Después for: " + array);
+	
+	console.log("Antes cadena: " + array2);
+	array2=ordenar_cadena(array2);
+	console.log("Después cadena: " + array2);
+	</script>
+</html>
