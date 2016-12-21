@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Más ejemplos JS</title>
+	</head>
+	<body>
+<!--input type="text" name="var1">Introduzca primer número</input>
+<input type="text" name="var2">Introduzca segundo número</input>
+<input type="text" name="var3">Introduzca tercer número</input-->
+
+	</body>
+	<script>
+	function no_valido(valor){
+		return ((isNaN(valor) || valor==null) || valor=="")
+	}
+	do{
+	var var1=prompt("Introduzca primer número")
+	console.log(var1);
+	}
+	while (no_valido(var1));
+	do{
+	var var2=prompt("Introduzca segundo número")
+	}
+	while (no_valido(var2))
+	do{
+	var var3=prompt("Introduzca tercer número")
+	}
+	while (no_valido(var3))
+
+	var mayor
+	if (var1> var2){
+		mayor = var1
+	}
+	else {
+		mayor = var2
+	}
+		
+	if (mayor<var3){
+		mayor=var3
+	}
+	alert("El mayor es: " + mayor);
+	function signo(param){
+		var resultado = "Cero";
+		if (param>0){
+			resultado = "Positivo";
+		}
+		else if (param < 0) {
+			resultado = "Negativo";
+		}
+		return resultado;
+	}
+		
+	alert("El mayor es: " + signo(mayor));
+	alert("El primero es: " + signo(var1));
+	</script>
+</html>

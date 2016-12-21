@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Arrays y objetos</title>
+	</head>
+	<body>
+		<div id="division"></div>
+			
+	</body>
+	<script>
+	
+		var div= document.getElementById("division");
+
+		var arrayUno = new Array();
+		
+		div.innerHTML += arrayUno + "<br>";
+		arrayUno[0]="Elemento 0";
+		arrayUno[1]="Elemento 1";
+		
+		div.innerHTML += arrayUno + "<br>";
+		
+		arrayUno["propiedad"] = "ELEMENTO PROP";
+		div.innerHTML += arrayUno.propiedad + "<br>";
+		
+	</script>
+	</html>

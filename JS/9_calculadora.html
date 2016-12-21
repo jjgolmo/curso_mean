@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculadora prueba JS</title>
+	</head>
+	<body>
+		<form name="calculadora">
+			Operando 1: <input name=op1 value=0 size=12 maxlength=12 type="text">
+			<br>
+			Operando 2: <input name=op2 value=0 size=12 maxlength=12 type="text">
+			<br>
+			
+			<input type="button" value=" + " onclick=calcula("+")>
+			<input type="button" value=" - " onclick=calcula("-")>
+			<input type="button" value=" * " onclick=calcula("*")>
+			<input type="button" value=" / " onclick=calcula("/")>
+			<br>
+			<br/>
+			Resultado: <input type="text" name=resultado>
+			<br/>
+			
+		</form>
+	</body>
+	<script>
+	
+	function calcula(variable){
+		var operando1= document.calculadora.op1.value;
+		var operando2= document.calculadora.op2.value;
+		
+		var result = eval(operando1 + variable + operando2);
+		document.calculadora.resultado.value=result;
+		
+		console.log(operando1)
+		console.log(operando2)
+	}
+		
+	</script>
+	</html>
