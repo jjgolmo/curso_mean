@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Ejemplo formularios HTML5">
+		<title>Ejemplo HTML5 formularios</title>
+	</head>
+	<body>
+		<form name="miformulario" id="miformulario" method="get">
+			Nombre: <input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern="[a-z]" title="Sólo admite Texto"><br>
+			Email: <input type="email" name="email" id="email" placeholder="ejemplo@servidor.com"><br>
+			Color: <input type="color" name="nombre" id="color"><br>
+			URL: <input type="url" name="url" id="url"><br>
+			Edad: <input type="number" name="edad" id="edad" min="18" max="100" step="5" required><br>
+			Fecha: <input type="date" name="fecha" id="fecha" required><br>
+			<datalist id="milista">
+				<option label="Chrome" value="Chrome">
+				<option label="Internet Explorer" value="Internet Explorer">
+				<option label="Firefox" value="Firefox">
+				<option label="Opera" value="Opera">
+				<option label="Otro" value="Otro">
+			</datalist>
+			Navegador: <input list="milista" name="navegador" id="navegador">
+			<input type="submit" value="Enviar">	
+		</form>
+
+	</body>
+</html>
