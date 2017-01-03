@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ejemplo uso audio videos">
+    <title>Ejemplo uso audio videos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de uso de audio y videos </h1>
+    </header>
+    <section>
+        Archivo de audio <br>
+        <audio name="sonido" id="sonido" src="http://htmlya.com.ar/html5/simulador/gallo.mp3" controls><br>
+        </audio>> Controles <br>
+        <input type="button" name="playudio" id="playaudio" onclick="playaudio()" value="Play">
+        <input type="button" name="pauseaudio" id="pauseaudio" onclick="pauseaudio()" value="Pause">
+    </section>
+    <section>
+        Archivo de video <br>
+        <video src="http://videos.mozilla.org/firefox/3.5/overview/overview.ogv" width="300" height="300" controls name="video" id="video"><br>
+		</video> Controles <br>
+        <input type="button" name="playvideo" id="playvideo" onclick="playvideo()" value="Play">
+        <input type="button" name="pausevideo" id="pausevideo" onclick="pausevideo()" value="Pause">
+    </section>
+</body>
+
+<script>
+    function playaudio() {
+        var boton = document.getElementById("sonido");
+        console.log(boton)
+        boton.play();
+    }
+
+    function pauseaudio() {
+        var sonido = document.getElementsByName("sonido")[0];
+        sonido.pause();
+    }
+
+    function playvideo() {
+        var boton = document.getElementById("video");
+        console.log(boton)
+        boton.play();
+    }
+
+    function pausevideo() {
+        var sonido = document.getElementsByName("video")[0];
+        sonido.pause();
+    }
+</script>
+
+</html>

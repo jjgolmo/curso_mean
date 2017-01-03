@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ejemplo uso geoposicionamiento">
+    <title>Ejemplo uso posicion</title>
+</head>
+<script type="text/javascript">
+    function localizarme() {
+        if (navigator.geolocation) {
+            var opciones = {
+                timeout: 6000,
+                maximumAge: 60000,
+                enableHighAccuracy: true
+            }
+            navigator.geolocation.getCurrentPosition(alposicionar, errorposicion, opciones);
+
+        } else {
+            alert("No soporta ubicación")
+        }
+
+    }
+
+    function alposicionar(objetoposicion) {
+        var latitude = objetoposicion.coords.latitude;
+        var longitude = objetoposicion.coords.longitude;
+        var imagenMapa = "http://maps.google.com/maps/api/staticmap?" +
+            "sensor=false&" +
+            "center=" + latitude + "," + longitude +
+            "zoom=";
+    }
+</script>
