@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ejemplo web storage">
+    <title>Ejemplo uso web storage</title>
+</head>
+
+
+<body>
+    <form name="datos" id=datos>
+        <input type="text" name="nombre" id="nombre" />
+        <input type="text" name="apellido" id="apellido" />
+        <input type="button" value="Guardar" onclick="guardarinfo()" />
+    </form>
+    <br>
+    <br> Nombre almacenado: <label name="nombre_guardado" id="nombre_guardado"></label><br>
+    <br> Apellido almacenado: <label name="apellido_guardado" id="apellido_guardado"></label><br>
+    <input type="button" onclick="recuperarInfo()" value="Recuperar">
+</body>
+
+<script type="text/javascript">
+    var storage = "localStorage";
+
+    function guardarinfo() {
+        var nom = document.getElementById("nombre").value;
+        var apell = document.getElementById("apellido").value;
+        localStorage.setItem("nombre", nom);
+        localStorage.setItem("apellido", apell);
+    }
+
+    function recuperarInfo() {
+        var nombrerec = localStorage.getItem("nombre");
+        var apellrec = localStorage.getItem("apellido");
+        document.getElementById("nombre_guardado").innerHTML = nombrerec;
+        document.getElementById("apellido_guardado").innerHTML = apellrec;
+    }
+</script>
