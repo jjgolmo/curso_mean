@@ -1,42 +1,45 @@
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="Ejemplo header HTML5">
-		<title>Ejemplo HTML5 header</title>
-	</head>
-	<body>
-		<header>
-			<h1>Bienvenido, </h1>
-			<h2>Bienvenido, h2</h2>
-			<h3>Bienvenido, h3</h3>
-		</header>
-		<nav contenteditable="true">
-			<ul>
-				<li>principal</li>
-				<li>fotos</li>
-				<li>videos</li>
-				<li>mixto</li>
-				<li>varios</li>
-			</ul>
-		</nav>
-		<section>
-			<article>
-				<blockquote cite="www.google.es">Referencia a un texto externo</blockquote>
-			</article>
-			<article>
-				<p>Estás en la página <span> comida para todos </span>.</p>
-			</article>
-		</section>
-		<aside>
-			Prueba lateral 1
-			Prueba lateral 2
-			<article>
-				articulo lateral
-			</article>
-		</aside>
-		<footer>
-			Pie de pagina
-		</footer>
-	</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Curriculum">
+    <title>Formulario CV</title>
+</head>
+
+<body>
+    <section>
+        <form name="experiencias" id="experiencias" onsubmit="funcion_añade()">
+            Empresa: <input type="text" name="empresa" id="empresa"><br/> Cargo: <input type="text" name="cargo" id="cargo"><br/> Fecha inicio: <input type="text" name="fec_inicio" id="fec_inicio"><br/> Fecha fin: <input type="text" name="fec_fin" id="fec_fin"><br/>            Localización: <input type="text" name="localizacion" id="localizacion"><br/>
+            <input type="submit" value="Añadir" name="añadir" id="añadir">
+
+        </form>
+    </section>
+
+    <section>
+        JSON: <br>
+        <label name="json_generado">
+
+			</label>
+
+    </section>
+    <section>
+        Experiencia:
+        <input type="button" value="Cargar y mostrar" name="cargar" onclick="cargar()">
+        <label name="json_almacenado"></label>
+    </section>
+</body>
+
+<script>
+    function funcion_añade() {
+        //      var json = new JSON();
+        var formulario = document.getElementById("experiencias");
+
+
+        json = {
+            "Empresa": document.get
+        }
+    }
+</script>
+
 </html>

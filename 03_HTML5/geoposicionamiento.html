@@ -3,31 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ejemplo uso geoposicionamiento">
-    <title>Ejemplo uso posicion</title>
+    <meta name="description" content="Ejemplo web storage">
+    <title>Ejemplo uso web storage</title>
 </head>
+
+
+<body>
+    <form name="datos" id=datos>
+        <input type="text" name="nombre" id="nombre" />
+        <input type="text" name="apellido" id="apellido" />
+        <input type="button" value="Guardar" onclick="guardarinfo()" />
+    </form>
+    <br>
+    <br> Nombre almacenado: <label name="nombre_guardado" id="nombre_guardado"></label><br>
+    <br> Apellido almacenado: <label name="apellido_guardado" id="apellido_guardado"></label><br>
+    <input type="button" onclick="recuperarInfo()" value="Recuperar">
+</body>
+
 <script type="text/javascript">
-    function localizarme() {
-        if (navigator.geolocation) {
-            var opciones = {
-                timeout: 6000,
-                maximumAge: 60000,
-                enableHighAccuracy: true
-            }
-            navigator.geolocation.getCurrentPosition(alposicionar, errorposicion, opciones);
+    var storage = "localStorage";
 
-        } else {
-            alert("No soporta ubicación")
-        }
-
+    function guardarinfo() {
+        var nom = document.getElementById("nombre").value;
+        var apell = document.getElementById("apellido").value;
+        localStorage.setItem("nombre", nom);
+        localStorage.setItem("apellido", apell);
     }
 
-    function alposicionar(objetoposicion) {
-        var latitude = objetoposicion.coords.latitude;
-        var longitude = objetoposicion.coords.longitude;
-        var imagenMapa = "http://maps.google.com/maps/api/staticmap?" +
-            "sensor=false&" +
-            "center=" + latitude + "," + longitude +
-            "zoom=";
+    function recuperarInfo() {
+        var nombrerec = localStorage.getItem("nombre");
+        var apellrec = localStorage.getItem("apellido");
+        document.getElementById("nombre_guardado").innerHTML = nombrerec;
+        document.getElementById("apellido_guardado").innerHTML = apellrec;
     }
 </script>
